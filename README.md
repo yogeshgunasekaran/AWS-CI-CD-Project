@@ -14,11 +14,7 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
 
 ### Procedure
 
-- Log into Jenkins server as root user and install **docker engine** from this [official docker documentation](https://docs.docker.com/engine/install/#server)
-   - Add the jenkins user into to docker group 
-       ```sh 
-       sudo -i 
-       ```
-       ```sh 
-       id jenkins 
-       ```
+**Log into AWS,** <br>
+- In **Elastic Beanstalk &rarr; Create Application &rarr; Add users** 
+  - Give a **Application name** and its **tags**. Choose the required **Platform** and its **version** for the application to run. Intially, keep Application code section with **sample application**, later we can deploy our artifact
+  - Click **Configure more options** and configure the environment settings for the application as per the requirement. In **Capacity** &rarr; **Edit**, choose the Auto Scaling Group Environment type as **Load balanced** with **Min- 2** and **Max- 8** or as per the requirement.
