@@ -44,4 +44,4 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
 
 #### **Automation Method using AWS CI/CD Pipeline** 
 ##### <ins> *Note* </ins>  : Choose a region which has **'CodeArtifact'** in it
- - In **AWS CodeCommit &rarr; Create Application &rarr; Add users** 
+ - In **AWS CodeCommit &rarr; Repositories &rarr; Create repository** 
