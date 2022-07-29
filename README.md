@@ -30,4 +30,4 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
  - Deploy the DB schema into the RDS 'acounts' database
    - SSH to an Beanstalk Instance as a root user `sudo -i` and, 
       - Install the required packages `yum install git mysql -y`, clone the source code that contains the schema **'db_backup.sql'** file
-      - Verify the connection to the RDS from 
+      - Verify the connection to the RDS with `mysql -h <RDS-endpoint-here> -u admin -p<admin-pass-here> accounts` 
