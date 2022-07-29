@@ -46,3 +46,4 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
 ##### <ins> *Note* </ins>  : Choose a region which has **'CodeArtifact'** in it
  - In **AWS CodeCommit &rarr; Repositories &rarr; Create repository** 
    - Give a repository name as **code-repo** and click **Create**. This will create a repository just like in GitHub repository.
+ - In **IAM &rarr; Users &rarr; Add user**. Give user name as **code-admin**. Check mark the **Programmatic access** and click **Next:Permissions**. Choose **Attach existing policies directly &rarr; Create policy**. In Service, select **CodeCommit  &rarr; All CodeCommit actions**. In **Resources &rarr; Specific &rarr; AddARN** give the repo-region and repo-name and **Add**. Then, click **Review policy**
