@@ -32,3 +32,5 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
       - Install the required packages `yum install git mysql -y`, clone the source code that contains the schema **'db_backup.sql'** file
       - Verify the connection to the RDS with `mysql -h <RDS-endpoint-here> -u admin -p<admin-pass-here> accounts`. Verify the connection and exit
       - Now, deploy the schema to the accounts database, `mysql -h <RDS-endpoint-here> -u admin -p<admin-pass-here> accounts < src/main/resources/db_backup.sql`
+      
+ - Build the Artifact locally
