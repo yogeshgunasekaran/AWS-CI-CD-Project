@@ -45,3 +45,4 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
 #### **Automation Method using AWS CI/CD Pipeline** 
 ##### <ins> *Note* </ins>  : Choose a region which has **'CodeArtifact'** in it
  - In **AWS CodeCommit &rarr; Repositories &rarr; Create repository** 
+   - Give a repository name as **code-repo** and click **Create**. This will create a repository just like in GitHub repository.
