@@ -27,7 +27,7 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
    - Click the Instances that has been created by the Beanstalk and edit its inbound rules, **change &rarr;** SSH port22 from source: anywhere to **SSH port22 from source: My IP**
    - Click the RDS **'beanstalk-RDS-SG'** Security group and edit its inbound rules, **change &rarr;** MYSQL port3306 from source: My IP to **MYSQL port3306 from source: beanstalk-app-env-SG**
 
- - Deploy the application DB schema into the RDS 'acounts' database
+ - **Deploy** the application **DB schema** into the RDS 'acounts' database
    - SSH to an Beanstalk Instance as a root user `sudo -i` and, 
     - Install the required packages `yum install git mysql -y`, clone the source code that contains the schema **'db_backup.sql'** file
     - Verify the connection to the RDS with `mysql -h <RDS-endpoint-here> -u admin -p<admin-pass-here> accounts`. Verify the connection and exit
