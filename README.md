@@ -29,9 +29,9 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
 
  - Deploy the application DB schema into the RDS 'acounts' database
    - SSH to an Beanstalk Instance as a root user `sudo -i` and, 
-      - Install the required packages `yum install git mysql -y`, clone the source code that contains the schema **'db_backup.sql'** file
-      - Verify the connection to the RDS with `mysql -h <RDS-endpoint-here> -u admin -p<admin-pass-here> accounts`. Verify the connection and exit
-      - Now, deploy the schema to the accounts database, `mysql -h <RDS-endpoint-here> -u admin -p<admin-pass-here> accounts < src/main/resources/db_backup.sql`
+    - Install the required packages `yum install git mysql -y`, clone the source code that contains the schema **'db_backup.sql'** file
+    - Verify the connection to the RDS with `mysql -h <RDS-endpoint-here> -u admin -p<admin-pass-here> accounts`. Verify the connection and exit
+    - Now, deploy the schema to the accounts database, `mysql -h <RDS-endpoint-here> -u admin -p<admin-pass-here> accounts < src/main/resources/db_backup.sql`
       
  - **Manual Method** to Build and Deploy the Artifact from local system
    - First update the **applications.properties** file in `vim src/main/resources/applications.properties`. Edit and update **jdbc.url** with the RDS endpoint and **jdbc.username and jdbc.password** with admin and admin-pass
