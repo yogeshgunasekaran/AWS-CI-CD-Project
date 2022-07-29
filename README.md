@@ -41,3 +41,6 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
    - Now, we can see the Artifact in the **Elastic Beanstalk &rarr; Application versions**. Select it **app-test**, in Actions **&rarr; Deploy**. Events can be seen in the **Environments**. One important step to be followed after this is to configure the load balancer **health check** for the application
    - In **Elastic Beanstalk &rarr; Environments &rarr; app-env** click the **Configuration**. In the **Load balancer** section **&rarr; Edit**. Select the **Processes** and the Health check Path from **'/' to '/login'**. Also, checkmark the **Stickiness policy enabled** and **Save** and click **Apply** at the bottom.
    - To make the application configuration changes to live, rollback to downgrade the app first with sample-app '**Elastic Beanstalk &rarr; Application versions**' select the **Sample Application &rarr; Actions &rarr; Deploy**. Sample application web-page will be loaded in sommetime. Now, again rollback our application '**Elastic Beanstalk &rarr; Application versions**' select the **App-env &rarr; Actions &rarr; Deploy**  
+   
+**Setup for AWS CI/CD Pipeline,** <br>
+- 
