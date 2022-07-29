@@ -33,7 +33,7 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
     - Verify the connection to the RDS with `mysql -h <RDS-endpoint-here> -u admin -p<admin-pass-here> accounts`. Verify the connection and exit
     - Now, deploy the schema to the accounts database, `mysql -h <RDS-endpoint-here> -u admin -p<admin-pass-here> accounts < src/main/resources/db_backup.sql`
       
- - **Manual Method** to Build and Deploy the Artifact from local system
+ #### **Manual Method** to Build and Deploy the Artifact from local system
    - First update the **applications.properties** file in `vim src/main/resources/applications.properties`. Edit and update **jdbc.url** with the RDS endpoint and **jdbc.username and jdbc.password** with admin and admin-pass
    - Now build the application Artifact, `mvn install`
    - Copy the Artifact to the desktop, `cp target/vprofile-v2.war ~/Desktop/`
