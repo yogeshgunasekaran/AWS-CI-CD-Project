@@ -21,5 +21,5 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
   - #### <ins> *Note* </ins>  : For Production purpose do not create an RDS service in the Beanstalk platform itself. Since, it gets deleted along when Beanstalk is been deleted
   
  - In **RDS &rarr; Create database** 
-   - Choose **Standard create**, engine type **MySQL** and version **5.6.34**, template as **Free tier**. Give an DB instance identifier name, keep Master username as **admin** and Auto generate a password. Keep the remaining settings default as for the free tier. Create a new security group **beanstalk-RDS-SG**
+   - Choose **Standard create**, engine type **MySQL** and version **5.6.34**, template as **Free tier**. Give an DB instance identifier name, keep Master username as **admin** and Auto generate a password. Keep the remaining settings default as for the free tier. Create a new security group **beanstalk-RDS-SG**. In Additional configuration section, give Initial database name as **accounts**. This 'accounts' database will be used to setup the DB schema. Keep others defaults and click **Create database** 
 
