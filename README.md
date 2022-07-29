@@ -28,4 +28,6 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
    - Click the RDS **'beanstalk-RDS-SG'** Security group and edit its inbound rules, **change &rarr;** MYSQL port3306 from source: My IP to **MYSQL port3306 from source: beanstalk-app-env-SG**
 
  - Deploy the DB schema into the RDS 'acounts' database
-   - SSH to an Beanstalk Instance as a root user `sudo -i` and install the required packages `yum install git mysql -y`, clone the source code that contains the schema **db_backup.sql** file
+   - SSH to an Beanstalk Instance as a root user `sudo -i` and, 
+      - Install the required packages `yum install git mysql -y`, clone the source code that contains the schema **'db_backup.sql'** file
+      - Verify the connection to the RDS from 
