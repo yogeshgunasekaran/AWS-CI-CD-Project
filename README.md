@@ -37,3 +37,5 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
    - First update the **applications.properties** file in `vim src/main/resources/applications.properties`. Edit and update **jdbc.url** with the RDS endpoint and **jdbc.username and jdbc.password** with admin and admin-pass
    - Now build the application Artifact, `mvn install`
    - Copy the Artifact to the desktop, `cp target/vprofile-v2.war ~/Desktop/`
+   - In **Elastic Beanstalk &rarr; Environments &rarr;** click **App-env &rarr;** click **Upload**. Give a Version label **app-test** and upload the Artifact which is in the desktop.
+   - Now, we can see the Artifact in the **Application versions**. Select it **app-test**, in Actions **&rarr; Deploy** 
