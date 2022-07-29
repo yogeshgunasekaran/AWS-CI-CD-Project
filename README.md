@@ -25,4 +25,4 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
    
  - In **EC2 &rarr; Security Groups** 
    - Click the Instances that has been created by the Beanstalk and edit its inbound rules, **change &rarr;** SSH port22 from source anywhere to **SSH port22 from source My IP**
-   - Click the RDS Security group and edit its inbound rules, **change &rarr;** SSH port22 from source anywhere to **SSH port22 from source My IP**
+   - Click the RDS Security group and edit its inbound rules, **change &rarr;** SSH port22 from source My IP to **SSH port22 from source beanstalk-RDS-SG**
