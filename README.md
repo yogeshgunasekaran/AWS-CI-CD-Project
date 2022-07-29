@@ -25,4 +25,4 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
    
  - In **EC2 &rarr;** configure the **Security Groups** 
    - Click the Instances that has been created by the Beanstalk and edit its inbound rules, **change &rarr;** SSH port22 from source: anywhere to **SSH port22 from source: My IP**
-   - Click the RDS **'beanstalk-RDS-SG'** Security group and edit its inbound rules, **change &rarr;** MYSQL port22 from source: My IP to **MYSQL port22 from source: beanstalk-app-env-SG**
+   - Click the RDS **'beanstalk-RDS-SG'** Security group and edit its inbound rules, **change &rarr;** MYSQL port3306 from source: My IP to **MYSQL port3306 from source: beanstalk-app-env-SG**
