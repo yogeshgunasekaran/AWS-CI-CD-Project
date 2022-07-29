@@ -14,7 +14,7 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
 
 ### Procedure
 
-**Log into AWS,** <br>
+#### **Log into AWS,** <br>
 - In **Elastic Beanstalk &rarr; Create Application &rarr; Add users** 
   - Give Application name as **beanstalk-app-env** and its **tags**. Choose the required **Platform** and its **version** for the application to run. Intially, keep Application code section with **sample application**, later we can deploy our artifact
   - Click **Configure more options** and configure the environment settings for the application as per the requirement. In **Capacity** &rarr; **Edit**, choose the Auto Scaling Group Environment type as **Load balanced** with **Min- 2** and **Max- 8** or as per the requirement. Choose the required **Instance type** and keep the **Availability Zones** as **any** and select all the AZ's in Placement section for high availability. Scaling triggers Metric choose **NetworkOut** or **CPUUtilization** as per the choice and **Save**. In **Rolling updates and deployments** &rarr; **Edit**, choose the **Deployment policy** as per the requirement, say for eg. **Rolling** with **Batch size 25%** and **Save**. In **Security** &rarr; **Edit**, generate a new key-pair for Beanstalk in EC2 service and attach it here. But, note: this key-pair should only be used as a bastion host to connect with the RDS server in backend for intiating the database for once. In **Network** &rarr; **Edit**, provision the Beanstalk with the project VPC network. Remaining settings can be tweaked as per the requirements. Once done with the environment settings configurations finally click **Create app**, in sometime this will create an environment in Beanstalk and run the sample code application on it
@@ -41,6 +41,6 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
    - Now, we can see the Artifact in the **Elastic Beanstalk &rarr; Application versions**. Select it **app-test**, in Actions **&rarr; Deploy**. Events can be seen in the **Environments**. One important step to be followed after this is to configure the load balancer **health check** for the application
    - In **Elastic Beanstalk &rarr; Environments &rarr; app-env** click the **Configuration**. In the **Load balancer** section **&rarr; Edit**. Select the **Processes** and the Health check Path from **'/' to '/login'**. Also, checkmark the **Stickiness policy enabled** and **Save** and click **Apply** at the bottom.
    - To make the application configuration changes to live, rollback to downgrade the app first with sample-app '**Elastic Beanstalk &rarr; Application versions**' select the **Sample Application &rarr; Actions &rarr; Deploy**. Sample application web-page will be loaded in sommetime. Now, again rollback our application '**Elastic Beanstalk &rarr; Application versions**' select the **App-env &rarr; Actions &rarr; Deploy**  
-   
-**Setup for AWS CI/CD Pipeline,** <br>
-- 
+
+#### **Setup for AWS CI/CD Pipeline,** <br>
+ - 
