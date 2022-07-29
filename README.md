@@ -24,5 +24,5 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
    - Choose **Standard create**, engine type **MySQL** and version **5.6.34**, template as **Free tier**. Give an DB instance identifier name, keep Master username as **admin** and Auto generate a password. Keep the remaining settings default as for the free tier. Create a new security group **beanstalk-RDS-SG**. In Additional configuration section, give Initial database name as **accounts**. This 'accounts' database will be used to setup the DB schema. Keep others defaults and finally click **Create database**. Click **View credential details** on the top right and store the credentials
    
  - In **EC2 &rarr;** configure the **Security Groups** 
-   - Click the Instances that has been created by the Beanstalk and edit its inbound rules, **change &rarr;** SSH port22 from source anywhere to **SSH port22 from source My IP**
-   - Click the RDS **'beanstalk-RDS-SG'** Security group and edit its inbound rules, **change &rarr;** SSH port22 from source My IP to **SSH port22 from source beanstalk-app-env-SG**
+   - Click the Instances that has been created by the Beanstalk and edit its inbound rules, **change &rarr;** SSH port22 from source: anywhere to **SSH port22 from source: My IP**
+   - Click the RDS **'beanstalk-RDS-SG'** Security group and edit its inbound rules, **change &rarr;** SSH port22 from source: My IP to **SSH port22 from source: beanstalk-app-env-SG**
