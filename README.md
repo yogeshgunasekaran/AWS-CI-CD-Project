@@ -70,3 +70,5 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
      ```sh
      ssh git-codecommit.us-east-2.amazonaws.com
      ```
+**Transition of an existing repository from Github to AWS CodeCommit**
+ - 
