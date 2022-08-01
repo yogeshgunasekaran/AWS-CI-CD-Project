@@ -61,5 +61,9 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
       User APKAXIXFJTQEW2ZCTWED
       IdentityFile ~/.ssh/codecommit_rsa
     ```
-     This **ssh_config_file** does the authentication when using the **codecommit** service which contains the public SSH key ID and private key
+     This **ssh_config_file** does the authentication when using the **codecommit** service which contains the public SSH key ID and private key <br>
+     Also, change the file permission to executable 
+     ```sh
+     chmod 600 config
+     ```
    
