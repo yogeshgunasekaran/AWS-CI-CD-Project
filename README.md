@@ -7,7 +7,7 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
 ### Steps 
 > 1. Create Elastic Beanstalk (PaaS) for the Application
 > 2. Setup RDS Instance & Application Setup on Beanstalk
-> 3. Code Commit
+> 3. Setup AWS Code Commit with a repository for the codes
 > 4. Code Build
 > 5. Build & Deploy
 > 6. Code Pipeline 
@@ -110,3 +110,5 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
     Now, all the branches have been pushed to the AWS CodeCommit repository from the local machine
     
 ### AWS CodeBuild
+ - In **AWS CodeBuild &rarr; Getting started &rarr; Create project** 
+ - Give a Project name **app-Build**, in Source provider choose **AWS CodeCommit** and select the repository and the branch that contains the codes for the web-application. In the Environment section, keep Operating system as **Ubuntu**, Runtime(s) as **Standard**, for Image select any image, Environment type as **Linux** 
