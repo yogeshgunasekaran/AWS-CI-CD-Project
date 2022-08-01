@@ -88,3 +88,9 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
     ```sh
     git branch -a
     ```
+    ```sh
+    git fetch --tags
+    ```
+    ```sh
+    git remote rm origin <aws-codecommit-cloneURL-cloneSSH-link-here>
+    ```
