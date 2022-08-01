@@ -92,5 +92,11 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
     git fetch --tags
     ```
     ```sh
-    git remote rm origin <aws-codecommit-cloneURL-cloneSSH-link-here>
+    git remote rm origin
+    ```
+    ```sh
+    git remote add origin <aws-codecommit-cloneURL-cloneSSH-link-here>
+    ```
+    ```sh
+    cat .git/config
     ```
