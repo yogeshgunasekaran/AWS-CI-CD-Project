@@ -52,14 +52,14 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
  - In local machine, go to the path `cd /c/Users/yogesh/.ssh/` and create a **config** file `vim config` 
    
    > Host git-codecommit.*.amazonaws.com <br> 
-   > User < aws-SSH-key-ID-here > <br>
-   > IdentityFile < path-to-the-private-key-here > <br>
+   >   User < aws-SSH-key-ID-here > <br>
+   >   IdentityFile < path-to-the-private-key-here > <br>
    
    Example,
     ```sh
     Host git-codecommit.*.amazonaws.com
-    User APKAXIXFJTQEW2ZCTWED
-    IdentityFile ~/.ssh/codecommit_rsa
+      User APKAXIXFJTQEW2ZCTWED
+      IdentityFile ~/.ssh/codecommit_rsa
     ```
     > This **ssh_config_file** does the authentication when using the **codecommit** service which contains the public SSH key ID and private key
    
