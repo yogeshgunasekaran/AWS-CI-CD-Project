@@ -49,3 +49,17 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
  - In **IAM &rarr; Users &rarr; Add user**. Give user name as **code-admin**. Check mark the **Programmatic access** and click **Next:Permissions**. Choose **Attach existing policies directly &rarr; Create policy**. In Service, select **CodeCommit  &rarr; All CodeCommit actions**. In **Resources &rarr; Specific &rarr; AddARN** give the repo-region and repo-name and **Add**. Then, click **Review policy** and give policy a name and click **Create policy**. Now, attach this policy to the user **code-admin** and click **Create user**
  - In local machine, generate an SSH key-pair using `ssh-keygen.exe` with name as `/c/Users/yogesh/.ssh/codecommit_rsa`
  - In **IAM &rarr; Users &rarr; code-admin &rarr; Security-credentials**. In Access keys section, **Delete** the Access key. In **SSH keys for AWS CodeCommit** Upload SSH public key. In local machine, go to the path that contains the ssh key-pair `cd .ssh`, use `cat codecommit_rsa.pub` to copy and paste it in the **Upload SSH public key** in AWS and note the **SSH key ID**
+ - In local machine, go to the path `cd /c/Users/yogesh/.ssh/` and create a **config** file `vim config` 
+   
+   > Host git-codecommit.*.amazonaws.com <br> 
+   > User APKAXIXFJTQEW2ZCTWED <br>
+   > IdentityFile ~/.ssh/codecommit_rsa <br>
+   
+   Example,
+    ```sh
+    Host git-codecommit.*.amazonaws.com
+    User APKAXIXFJTQEW2ZCTWED
+    IdentityFile ~/.ssh/codecommit_rsa
+    ```
+    > This **ssh_config_file** does the authentication when using the **codecommit** service which contains the SSH key ID public and private key
+   
