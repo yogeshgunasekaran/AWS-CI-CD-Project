@@ -85,3 +85,6 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
     ```sh
     for i in `cat /tmp/branches`; do git checkout $i; done
     ```
+    ```sh
+    git branch -a
+    ```
