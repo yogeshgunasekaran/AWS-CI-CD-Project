@@ -70,5 +70,18 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
      ```sh
      ssh git-codecommit.us-east-2.amazonaws.com
      ```
-**Transition of an existing repository from Github to AWS CodeCommit**
- - 
+#### Transition of an existing repository from Github to AWS CodeCommit (Optional)
+ - Clone a Github repository in local machine and **cd** into it
+ - If the repository contains so many branches do the following steps,
+    ```sh 
+    git branch -a | grep -v HEAD | cut -d '/' -f3 | grep -v master > /tmp/branches
+    ```
+    ```sh
+    cat /tmp/branches
+    ```
+    ```sh
+    for i in `cat /tmp/branches`; do echo $i; done
+    ```
+    ```sh
+    for i in `cat /tmp/branches`; do git checkout $i; done
+    ```
