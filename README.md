@@ -52,8 +52,8 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
  - In local machine, go to the path `cd /c/Users/yogesh/.ssh/` and create a **config** file `vim config` 
    
    > Host git-codecommit.*.amazonaws.com <br> 
-   > User <aws-SSH-key-ID-here> <br>
-   > IdentityFile <path-to-the-private-key> <br>
+   > User < aws-SSH-key-ID-here > <br>
+   > IdentityFile < path-to-the-private-key-here > <br>
    
    Example,
     ```sh
