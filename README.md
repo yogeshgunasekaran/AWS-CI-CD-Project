@@ -103,4 +103,7 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
     ```sh
     git push origin --all
     ```
+      ```sh
+    git push --tags
+    ```
     Now, all the branches have been pushed to the AWS CodeCommit repository from the local machine
