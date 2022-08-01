@@ -33,7 +33,7 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
     - Verify the connection to the RDS with `mysql -h <RDS-endpoint-here> -u admin -p<admin-pass-here> accounts`. Verify the connection and exit
     - Now, deploy the schema to the accounts database, `mysql -h <RDS-endpoint-here> -u admin -p<admin-pass-here> accounts < src/main/resources/db_backup.sql`
       
- #### **Manual Method** to Build and Deploy the Artifact from local system
+ ### **Manual Method** to Build and Deploy the Artifact from local system
    - First update the **applications.properties** file in `vim src/main/resources/applications.properties`. Edit and update **jdbc.url** with the RDS endpoint and **jdbc.username and jdbc.password** with admin and admin-pass
    - Now build the application Artifact, `mvn install`
    - Copy the Artifact to the desktop, `cp target/vprofile-v2.war ~/Desktop/`
@@ -42,7 +42,8 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
    - In **Elastic Beanstalk &rarr; Environments &rarr; app-env** click the **Configuration**. In the **Load balancer** section **&rarr; Edit**. Select the **Processes** and the Health check Path from **'/' to '/login'**. Also, checkmark the **Stickiness policy enabled** and **Save** and click **Apply** at the bottom.
    - To make the application configuration changes to live, rollback to downgrade the app first with sample-app '**Elastic Beanstalk &rarr; Application versions**' select the **Sample Application &rarr; Actions &rarr; Deploy**. Sample application web-page will be loaded in sommetime. Now, again rollback our application '**Elastic Beanstalk &rarr; Application versions**' select the **App-env &rarr; Actions &rarr; Deploy**  
 
-#### **Automation Method using AWS CI/CD Pipeline** 
+### **Automation Method using AWS CI/CD Pipeline** 
+#### AWS CodeCommit
 ##### <ins> *Note* </ins>  : Choose a region which has **'CodeArtifact'** in it
  - In **AWS CodeCommit &rarr; Repositories &rarr; Create repository** 
    - Give a repository name as **code-repo** and click **Create**. This will create a repository just like in GitHub repository.
@@ -70,7 +71,7 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
      ```sh
      ssh git-codecommit.us-east-2.amazonaws.com
      ```
-#### Transition of an existing repository from Github to AWS CodeCommit (Optional)
+### Transition of an existing repository from Github to AWS CodeCommit (Optional)
  - Clone a Github repository in local machine and **cd** into it cloned directory
  - If the repository contains so many branches do the following steps, or just checkout to the individual branches that have to be pushed to the AWS CodeCommit repository
     ```sh 
@@ -107,3 +108,5 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
     git push --tags
     ```
     Now, all the branches have been pushed to the AWS CodeCommit repository from the local machine
+    
+### AWS CodeBuild
