@@ -111,6 +111,6 @@ This project is to deploy a web-application using AWS CI/CD Pipeline completely 
     
 ### AWS CodeBuild
  - In **AWS CodeBuild &rarr; Getting started &rarr; Create project** 
- - Give a Project name **app-Build**, in Source provider choose **AWS CodeCommit** and select the repository and the branch that contains the codes for the web-application. In the Environment section, keep Operating system as **Ubuntu**, Runtime(s) as **Standard**, for Image select any image, Environment type as **Linux** 
+ - Give a Project name **app-Build**, in Source provider choose **AWS CodeCommit** and select the repository and the branch that contains the codes for the web-application. In the Environment section, keep the Operating system as **Ubuntu**, Runtime(s) as **Standard**, for Image select any image, Environment type as **Linux** 
  -
- 
+ -
